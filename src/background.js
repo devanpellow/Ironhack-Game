@@ -21,7 +21,9 @@ class Background {
 			this.y1 = -HEIGHT;
 		}
 
-		this.y += 4;
-		this.y1 += 4;
+		this.y += 4.5;
+		this.y1 += 4.5;
+
+		
 	}
 }

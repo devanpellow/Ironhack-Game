@@ -11,28 +11,29 @@ class Character {
 	}
 
 	draw() {
-		push();
-		translate(this.x, this.y);
-		angleMode(DEGREES);
-		rotate(this.angle);
+		// push();
+		// translate(this.x, this.y);
+		// angleMode(DEGREES);
+		// rotate(this.angle);
 		image(
 			this.characterImg,
-			0,
-			0,
+			this.x,
+			this.y,
 			this.characterImg.width / 3,
 			this.characterImg.height / 3
-		);
+			);
+			// rect(this.x, this.y, this.characterImg.width / 3, this.characterImg.height / 3 );
 
 		this.characterRect = {
 			left: this.x,
-			right: this.x + this.characterImg.width / 3,
+			right: this.x + this.characterImg.width / 4,
 			top: this.y,
-			bottom: this.y + this.characterImg.height / 3
+			bottom: this.y + this.characterImg.height / 4
 		};
 		if (keyIsPressed === 32) {
       // console.log(game.bulletArr);
 		}
-    pop();
+    // pop();
 	}
 
 	keyIsDown() {
