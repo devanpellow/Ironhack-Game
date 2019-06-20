@@ -6,7 +6,7 @@ class Background {
 	}
 
 	setup() {
-		this.bgImg = loadImage("assets/star_bg.jpg");
+		this.bgImg = loadImage("assets/images/star_bg.jpg");
 	}
 
 	draw() {

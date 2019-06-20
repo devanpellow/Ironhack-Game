@@ -1,10 +1,39 @@
+* {
+  margin: 0 0;
+
+}
+.container {
+  display: flex;
+
+}
+
 #sketch-div {
   display: flex;
   justify-content: center;
-  /* align-content: center; */
+  align-items: center;
+  align-content: center;
   /* align-items: center;  */
 }
 
 body {
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4, p, ul {
+  color: white;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }

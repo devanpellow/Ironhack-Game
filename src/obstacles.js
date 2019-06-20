@@ -9,15 +9,12 @@ class Obstacles {
 	}
 
 	draw() {
-    this.y += 8;
-		// if((game.score / 200) > 1 &&  (game.score / 200) < 2) {
-    //   this.y += 1
-    // }
-		image(obstacleImg, this.x, this.y);
+    this.y += 5.5;
+		image(obstacleImg, this.x, this.y, obstacleImg.width / 1.5, obstacleImg.height);
 
 		this.steelRect = {
 			left: this.x,
-			right: this.x + obstacleImg.width,
+			right: this.x + obstacleImg.width / 1.5,
 			top: this.y - obstacleImg.height,
 			bottom: this.y
 		};
@@ -27,7 +24,8 @@ class Obstacles {
 	checkCollision() {
 		if (this.intersectRect(this.steelRect, game.character1.characterRect)) {
 			console.log(this.steelRect, game.character1.characterRect);
-			game.over();
+      game.over(); 
+    
 		}
   }
   

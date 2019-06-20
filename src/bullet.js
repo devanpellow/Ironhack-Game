@@ -1,12 +1,12 @@
 class Bullet {
 	constructor() {
 		this.y = game.character1.y;
-		this.x = game.character1.x + 128 / 6 - 2;
+		this.x = game.character1.x + 128 / 6 - 8;
 		this.hit = false;
 	}
 
 	setup() {
-		this.bulletImg = loadImage("assets/bullet.png");
+		this.bulletImg = loadImage("assets/images/bullet.png");
 	}
 
 	draw() {
@@ -14,10 +14,10 @@ class Bullet {
 			this.bulletImg,
 			this.x,
 			this.y,
-			this.bulletImg.width * 2,
-			this.bulletImg.height * 2
+			this.bulletImg.width * 1.5,
+			this.bulletImg.height * 1.5
 		);
-		this.y -= 5;
+		this.y -= 4.5;
 		this.checkCollision();
 	}
 
@@ -38,11 +38,13 @@ class Bullet {
 				game.score += 100;
 				image(
 					explosionImg,
-					ufo.x - 40,
+					ufo.x - 15 ,
 					ufo.y - 30,
-					explosionImg.height / 10,
-					explosionImg.width / 10
+					explosionImg.height / 20,
+					explosionImg.width / 20
 				);
+				explosionSound.setVolume(0.8);
+				explosionSound.play();
 			}
 		});
 

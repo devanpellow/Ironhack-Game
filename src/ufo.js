@@ -13,15 +13,15 @@ class Ufo {
 	// 	if (game.score % 500 0)  {
 	// 		this.y += 1			
 	// }
-		this.y += 5;
-		image(ufo, this.x, this.y, ufo.height / 30, ufo.width / 35);
+		this.y += 3;
+		image(ufo, this.x, this.y, ufo.height / 60, ufo.width / 70);
 		// rect(this.x + 20, this.y, ufo.width / 40 - 20, ufo.height / 30);
 
 		this.ufoRect = {
 			left: this.x - 10,
-			right: this.x + ufo.width / 40,
+			right: this.x + ufo.width / 80,
 			top: this.y,
-			bottom: this.y + ufo.height / 30
+			bottom: this.y + ufo.height / 60
 		};
 		this.checkCollision();
 	}
