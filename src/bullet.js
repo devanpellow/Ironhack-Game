@@ -1,7 +1,7 @@
 class Bullet {
 	constructor() {
 		this.y = game.character1.y;
-		this.x = game.character1.x + 128 / 6 - 8;
+		this.x = game.character1.x + 128 / 6 - 10;
 		this.hit = false;
 	}
 
@@ -38,12 +38,12 @@ class Bullet {
 				game.score += 100;
 				image(
 					explosionImg,
-					ufo.x - 15 ,
+					ufo.x - 15,
 					ufo.y - 30,
 					explosionImg.height / 20,
 					explosionImg.width / 20
 				);
-				explosionSound.setVolume(0.8);
+				explosionSound.setVolume(1.5);
 				explosionSound.play();
 			}
 		});

@@ -82,7 +82,7 @@ class Character {
 		if (keyCode === 32) {
 			game.bulletArr.push(new Bullet());
 			game.bulletArr[game.bulletArr.length - 1].setup();
-			bulletSound.setVolume(0.2);
+			bulletSound.setVolume(0.4);
 			bulletSound.play();
 			
 		}
