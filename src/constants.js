@@ -1,5 +1,6 @@
 const HEIGHT = 650;
 const WIDTH = 400;
+let enterImg;
 let ufo;
 let obstacleImg;
 let gameOverImg;
@@ -12,7 +13,9 @@ let twoImg
 let threeImg
 let fightImg
 
+
 function preload() {
+  enterImg = loadImage("assets/images/press_enter.png")
 	ufo = loadImage("assets/images/ufo_green.png");
 	obstacleImg = loadImage("assets/images/steelstrip.png");
 	gameOverImg = loadImage("assets/images/game_over.png");

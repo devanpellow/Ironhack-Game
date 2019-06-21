@@ -2,10 +2,12 @@
 // let obstacleImg;
 // let characterImg;
 
+
 class Game {
 	constructor() {
 		this.background1 = new Background();
 		this.character1 = new Character();
+		this.startScreen = 0;
 		this.obstaclesArr = [];
 		this.ufoArr = [];
 		this.bulletArr = [];
@@ -15,20 +17,21 @@ class Game {
 	}
 	setup() {
 		this.background1.setup();
-		this.character1.setup();
+		this.character1.setup();	
 	}
-
+	
 	draw() {
 		this.background1.draw();
 		this.character1.draw();
 		this.character1.keyIsDown();
 		this.character1.edgeReached();
 
+		/* Print Score On Screen */
 		textSize(20);
 		text("Score: " + Math.floor(frameCount / 10 + this.score), 280, 642);
 		fill(255, 255, 255);
 
-		/// Start Delay
+		/* Start Game Delay */
 		if (frameCount > 0 && frameCount <= 180) {
 			image(
 				practiceImg,
@@ -64,7 +67,10 @@ class Game {
 			);
 		}
 
+
+		/* Begin game after 480 frames */
 		if (frameCount > 480) {
+
 			/* Decoration */
 			if (frameCount % 95 === 0) {
 				this.decorationArr.push(new Decoration());
@@ -94,7 +100,7 @@ class Game {
 				this.ufoArr.push(new Ufo());
 				this.ufoArr[this.ufoArr.length - 1].setup();
 			}
-			// console.log(this.ufoArr)
+			
 			this.ufoArr.forEach((ufo, i) => {
 				ufo.draw();
 				if (
@@ -113,19 +119,6 @@ class Game {
 				console.log(this.livesCount);
 			});
 		}
-		/*Lives and Game over */
-		// if (this.livesCount === 0) {
-		//   image(heartImg, 290, 955, heartImg.width / 16, heartImg.height/ 16 )
-		//   image(heartImg, 290 + heartImg.width / 16 , 955, heartImg.width / 16, heartImg.height/ 16 )
-		//   image(heartImg, 290 + (heartImg.width / 16)*2, 955, heartImg.width / 16, heartImg.height/ 16 )
-		// } else if (this.livesCount === 1) {
-		//   image(heartImg, 290 + heartImg.width / 16 , 955, heartImg.width / 16, heartImg.height/ 16 )
-		//   image(heartImg, 290 + (heartImg.width / 16)*2, 955, heartImg.width / 16, heartImg.height/ 16 )
-		// } else if (this.livesCount === 2) {
-		//   image(heartImg, 290 + (heartImg.width / 16)*2, 955, heartImg.width / 16, heartImg.height/ 16 )
-		// } else if (this.livesCount === 3) {
-		// 	this.over();
-		// }
 
 		// Aliens count
 		if (this.livesCount === 0) {

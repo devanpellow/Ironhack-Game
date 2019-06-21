@@ -1,6 +1,5 @@
 class Background {
 	constructor() {
-		// this.x = WIDTH;
 		this.y1 = 0;
 		this.y = -HEIGHT;
 	}

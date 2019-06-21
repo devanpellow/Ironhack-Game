@@ -41,28 +41,16 @@ class Character {
 		if (keyIsDown(LEFT_ARROW)) {
 			push();
 			this.x -= this.speed;
-			// rocketSound.setVolume(0.1)
-			// rocketSound.play()
-			// rocketSound.stop(0.2)
 		}
 		if (keyIsDown(RIGHT_ARROW)) {
 			push();
 			this.x += this.speed;
-			// rocketSound.setVolume(0.1)
-			// rocketSound.play()
-			// rocketSound.stop(0.2)
 		}
 		if (keyIsDown(UP_ARROW)) {
 			this.y -= this.speed;
-			// rocketSound.setVolume(0.1)
-			// rocketSound.play()
-			// rocketSound.stop(0.2)
 		}
 		if (keyIsDown(DOWN_ARROW)) {
 			this.y += this.speed;
-			// rocketSound.setVolume(0.1)
-			// rocketSound.play()
-			// rocketSound.stop(0.2)
 		}
 	}
 
@@ -84,7 +72,7 @@ class Character {
 			game.bulletArr[game.bulletArr.length - 1].setup();
 			bulletSound.setVolume(0.4);
 			bulletSound.play();
-			
+
 		}
 	}
 }

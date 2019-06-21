@@ -5,17 +5,12 @@ class Ufo {
 
 	setup() {
 		const rand = random(0, WIDTH - ufo.width / 35);
-		// const rand = random(-40, WIDTH - 100);
 		this.x = rand;
 	}
 
 	draw() {
-	// 	if (game.score % 500 0)  {
-	// 		this.y += 1			
-	// }
 		this.y += 3;
 		image(ufo, this.x, this.y, ufo.height / 60, ufo.width / 70);
-		// rect(this.x + 20, this.y, ufo.width / 40 - 20, ufo.height / 30);
 
 		this.ufoRect = {
 			left: this.x - 10,

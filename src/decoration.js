@@ -17,5 +17,6 @@ class Decoration {
 			decorationImg.width / 7,
 			decorationImg.height / 7
 		);
+		
 	}
 }
