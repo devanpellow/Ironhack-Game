@@ -28,7 +28,7 @@ class Game {
 
 		/* Print Score On Screen */
 		textSize(20);
-		text("Score: " + Math.floor(frameCount / 10 + this.score), 280, 642);
+		text("Score: " + Math.floor(frameCount / 10 + this.score), 250, 642);
 		fill(255, 255, 255);
 
 		/* Start Game Delay */
