@@ -1,6 +1,5 @@
 .container {
-  display: flex;
-  
+	display: flex;
 }
 
 .col {
@@ -22,13 +21,13 @@ body {
 	background-color: black;
 	display: flex;
 	flex-direction: row;
-  justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 350;
-  letter-spacing: 2px;
-  margin: 0 100px;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: 350;
+	letter-spacing: 2px;
+	margin: 0 100px;
 }
 
 h4,
@@ -38,37 +37,40 @@ ul {
 }
 
 img {
-  width: 90%;
-  padding-bottom: 130px;
+	width: 90%;
+	padding-bottom: 130px;
 }
 
 .story {
 	width: 25%;
 	display: flex;
 	flex-direction: column;
-  justify-content: space-around;
-  
+	justify-content: space-around;
 }
 
 .instructions {
-  width: 25%;
+	width: 25%;
 	display: flex;
 	flex-direction: column;
-  /* justify-content: space-around; */
-  justify-content: space-between
+	/* justify-content: space-around; */
+	justify-content: space-between;
 }
 
 .story p {
-  font-weight: 100;
-  letter-spacing: 2px;
+	font-weight: 100;
+	letter-spacing: 2px;
 }
-
 
 .instructions p {
-  padding: 5px;
-  display: flex;
-  align-content: center;
-  font-weight: 100;
-  letter-spacing: 2px;
+	padding: 5px;
+	display: flex;
+	align-content: center;
+	font-weight: 100;
+	letter-spacing: 2px;
 }
 
+.min {
+	color: red;
+	font-size: 0.5rem;
+	padding-top: 30px;
+}

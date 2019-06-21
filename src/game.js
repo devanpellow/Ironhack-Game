@@ -2,7 +2,6 @@
 // let obstacleImg;
 // let characterImg;
 
-
 class Game {
 	constructor() {
 		this.background1 = new Background();
@@ -14,12 +13,13 @@ class Game {
 		this.decorationArr = [];
 		this.livesCount = 0;
 		this.score = 0;
+		this.frameCount = 0;
 	}
 	setup() {
 		this.background1.setup();
-		this.character1.setup();	
+		this.character1.setup();
 	}
-	
+
 	draw() {
 		this.background1.draw();
 		this.character1.draw();
@@ -32,7 +32,9 @@ class Game {
 		fill(255, 255, 255);
 
 		/* Start Game Delay */
-		if (frameCount > 0 && frameCount <= 180) {
+		if (this.startScreen) this.frameCount++;
+
+		if (this.frameCount > 0 && this.frameCount <= 180) {
 			image(
 				practiceImg,
 				85,
@@ -41,14 +43,14 @@ class Game {
 				practiceImg.height / 2
 			);
 		}
-		if (frameCount > 180 && frameCount <= 240) {
+		if (this.frameCount > 180 && this.frameCount <= 240) {
 			image(threeImg, 155, HEIGHT / 3);
 		}
 
-		if (frameCount > 240 && frameCount <= 300) {
+		if (this.frameCount > 240 && this.frameCount <= 300) {
 			image(twoImg, 155, HEIGHT / 3);
 		}
-		if (frameCount > 300 && frameCount <= 360) {
+		if (this.frameCount > 300 && this.frameCount <= 360) {
 			image(
 				oneImg,
 				175,
@@ -57,7 +59,7 @@ class Game {
 				oneImg.height / 1.6
 			);
 		}
-		if (frameCount > 360 && frameCount <= 480) {
+		if (this.frameCount > 360 && this.frameCount <= 480) {
 			image(
 				fightImg,
 				95,
@@ -67,12 +69,10 @@ class Game {
 			);
 		}
 
-
 		/* Begin game after 480 frames */
-		if (frameCount > 480) {
-
+		if (this.frameCount > 480) {
 			/* Decoration */
-			if (frameCount % 95 === 0) {
+			if (this.frameCount % 95 === 0) {
 				this.decorationArr.push(new Decoration());
 				this.decorationArr[this.decorationArr.length - 1].setup();
 			}
@@ -84,7 +84,7 @@ class Game {
 			});
 
 			/* steel beam falling */
-			if (frameCount % 80 === 0) {
+			if (this.frameCount % 80 === 0) {
 				this.obstaclesArr.push(new Obstacles());
 				this.obstaclesArr[this.obstaclesArr.length - 1].setup();
 			}
@@ -96,11 +96,11 @@ class Game {
 			});
 
 			/* UFO falling */
-			if (frameCount % 110 === 0) {
+			if (this.frameCount % 110 === 0) {
 				this.ufoArr.push(new Ufo());
 				this.ufoArr[this.ufoArr.length - 1].setup();
 			}
-			
+
 			this.ufoArr.forEach((ufo, i) => {
 				ufo.draw();
 				if (
