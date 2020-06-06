@@ -70,10 +70,21 @@ img {
 }
 
 .tag-line {
-  text-decoration: none;
   color: gray;
   color: inherit;
 	font-size: .8rem;
   padding-top: 10px;
   
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
 }
