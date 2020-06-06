@@ -68,6 +68,7 @@ img {
 	font-weight: 100;
 	letter-spacing: 2px;
 }
+a { color: inherit; } 
 
 .tag-line {
   color: gray;
@@ -75,16 +76,4 @@ img {
 	font-size: .8rem;
   padding-top: 10px;
   
-}
-
-a.nostyle:link {
-  text-decoration: inherit;
-  color: inherit;
-  cursor: auto;
-}
-
-a.nostyle:visited {
-  text-decoration: inherit;
-  color: inherit;
-  cursor: auto;
 }
