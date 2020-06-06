@@ -70,8 +70,10 @@ img {
 }
 
 .tag-line {
-	color: gray;
-	font-size: .7rem;
-  padding-top: 10px;
   text-decoration: none;
+  color: gray;
+  color: inherit;
+	font-size: .8rem;
+  padding-top: 10px;
+  
 }
