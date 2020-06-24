@@ -77,3 +77,8 @@ a { color: lightsteelblue; }
   padding-top: 10px;
   
 }
+
+@media only screen and (max-width: 900px) {
+  /* Style adjustments for non responsive websites */
+  body{width:940px;}
+}
